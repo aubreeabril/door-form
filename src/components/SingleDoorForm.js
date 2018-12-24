@@ -1,38 +1,42 @@
 import React from "react";
+import TextField from "@material-ui/core/TextField";
+import Dimensions from "./Dimensions";
 
-const SingleDoorForm = () => {
-  return (
-    <div>
-      <form>
-        <label htmlFor="location">Location</label>
-        <input type="text" id="location" />
-        <div id="dimensions-section">
-          <h4>Dimensions</h4>
-          <label htmlFor="width">Width</label>
-          <input type="number" id="width" />
-          <label htmlFor="height">Height</label>
-          <input type="number" id="height" />
-          <label htmlFor="thickness">Thickness</label>
-          <input type="number" id="thickness" />
-        </div>
-        <div id="materials-section">
-          <h4>Materials</h4>
-          <label htmlFor="door-material">Door Material</label>
-          <select name="materials">
-            <option value="wood">Wood</option>
-            <option value="aluminum">Aluminum</option>
-            <option value="hollow-metal">Hollow Metal</option>
-          </select>
-          <label htmlFor="doorframe-materials">Door Frame Material</label>
-          <select name="doorframe-materials">
-            <option value="wood">Wood</option>
-            <option value="aluminum">Aluminum</option>
-            <option value="hollow-metal">Hollow Metal</option>
-          </select>
-        </div>
-      </form>
-    </div>
-  );
-};
+class SingleDoorForm extends React.Component {
+  state = {
+    location: ""
+  };
+
+  render() {
+    return (
+      <div style={{ marginTop: "8%" }}>
+        <form>
+          <TextField
+            id="location"
+            label="Location"
+            value={this.state.location}
+          />
+          <Dimensions />
+
+          <div id="materials-section">
+            <h4>Materials</h4>
+            <label htmlFor="door-material">Door Material</label>
+            <select name="materials">
+              <option value="wood">Wood</option>
+              <option value="aluminum">Aluminum</option>
+              <option value="hollow-metal">Hollow Metal</option>
+            </select>
+            <label htmlFor="doorframe-materials">Door Frame Material</label>
+            <select name="doorframe-materials">
+              <option value="wood">Wood</option>
+              <option value="aluminum">Aluminum</option>
+              <option value="hollow-metal">Hollow Metal</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    );
+  }
+}
 
 export default SingleDoorForm;
