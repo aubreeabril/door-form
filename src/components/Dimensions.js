@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import TextField from "@material-ui/core/TextField";
+import FormControl from "@material-ui/core/FormControl";
 
 class Dimensions extends Component {
   state = {
@@ -9,13 +10,17 @@ class Dimensions extends Component {
   };
   render() {
     return (
-      <div id="dimensions-section">
+      <div id="dimensions-section" className="form-section">
         <h4>Dimensions</h4>
         <TextField label="Width" name="width" value={this.state.width} />
+
         <TextField label="Height" name="height" value={this.state.height} />
 
-        <label htmlFor="thickness">Thickness</label>
-        <input type="number" id="thickness" />
+        <TextField
+          label="Thickness"
+          name="thickness"
+          value={this.state.thickness}
+        />
       </div>
     );
   }

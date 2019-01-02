@@ -13,16 +13,6 @@ describe("Single door form", () => {
     expect(inputNode).toBeDefined();
   });
 
-  it("has width, height and length inputs", () => {
-    const { getByLabelText } = render(<SingleDoorForm />);
-    const widthInput = getByLabelText("Width");
-    const heightInput = getByLabelText("Height");
-    const thicknessInput = getByLabelText("Thickness");
-    expect(widthInput).toBeDefined();
-    expect(heightInput).toBeDefined();
-    expect(thicknessInput).toBeDefined();
-  });
-
   it("has material fields", () => {
     const { getByText } = render(<SingleDoorForm />);
     const doorMaterial = getByText("Door Material");

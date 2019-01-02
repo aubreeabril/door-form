@@ -11,14 +11,16 @@ class SingleDoorForm extends React.Component {
     return (
       <div style={{ marginTop: "8%" }}>
         <form>
-          <TextField
-            id="location"
-            label="Location"
-            value={this.state.location}
-          />
+          <div className="form-section">
+            <TextField
+              id="location"
+              label="Location"
+              value={this.state.location}
+            />
+          </div>
           <Dimensions />
 
-          <div id="materials-section">
+          <div id="materials-section" className="form-section">
             <h4>Materials</h4>
             <label htmlFor="door-material">Door Material</label>
             <select name="materials">
