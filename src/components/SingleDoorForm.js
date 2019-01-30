@@ -2,6 +2,7 @@ import React from "react";
 import TextField from "@material-ui/core/TextField";
 import Dimensions from "./Dimensions";
 import Materials from "./Materials";
+import Misc from "./Misc";
 
 class SingleDoorForm extends React.Component {
   state = {
@@ -21,6 +22,7 @@ class SingleDoorForm extends React.Component {
           </div>
           <Dimensions />
           <Materials />
+          <Misc />
         </form>
       </div>
     );
